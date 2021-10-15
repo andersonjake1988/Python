@@ -47,8 +47,8 @@ n_cols = predictors.shape[1]
 model = Sequential()
 model.add(Dense(100, activation='relu', input_shape = (n_cols,)))
 model.add(Dense(100, activation='relu'))
-model.add(Dense(100, activation='relu'))
-model.add(Dense(100, activation='relu'))
+#model.add(Dense(100, activation='relu'))
+#model.add(Dense(100, activation='relu'))
 model.add(Dense(2, activation='softmax'))
 model.compile(optimizer='Adam', loss='categorical_crossentropy', metrics = ['accuracy'])
 model.fit(predictors, target, validation_split=0.3, epochs=100)
@@ -122,11 +122,6 @@ f1_score = (2 * precision * true_positive_rate)/(precision + true_positive_rate)
 print('\nAccuracy = %.2f \nPrecision = %.2f \nRecall(TPR) = %.2f \nSpecificity(TNR) = %.2f \nF1 Score = %.2f'%
       (accuracy, precision, true_positive_rate, true_negative_rate, f1_score))
 
-
-
-
-mylist = list(range(0,10))
-mylist + 5
 
 
 
